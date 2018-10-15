@@ -1,6 +1,4 @@
 const path = require("path")
-const baseConfig = require("@vue/cli-service/webpack.config")
-const merge = require("webpack-merge")
 const packageConfig = require("../package.json")
 const chalk = require("chalk")
 
@@ -164,7 +162,6 @@ module.exports = {
     "**/*.spec.jsx",
     "**/ExampleComponent.vue",
   ],
-
   styleguideDir: "../dist/docs",
   printServerInstructions() {},
   printBuildInstructions(config) {
