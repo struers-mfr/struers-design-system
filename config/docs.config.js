@@ -1,5 +1,5 @@
 const path = require("path")
-const baseConfig = require("../build/webpack.base.conf.js")
+const baseConfig = require("@vue/cli-service/webpack.config")
 const merge = require("webpack-merge")
 const packageConfig = require("../package.json")
 const chalk = require("chalk")
@@ -164,30 +164,7 @@ module.exports = {
     "**/*.spec.jsx",
     "**/ExampleComponent.vue",
   ],
-  webpackConfig: merge(baseConfig, {
-    module: {
-      rules: [
-        {
-          test: /\.(css?|scss|sass)(\?.*)?$/,
-          use: [
-            "style-loader",
-            "css-loader",
-            "sass-loader",
-            {
-              loader: "sass-resources-loader",
-              options: {
-                resources: [
-                  path.join(__dirname, "../src/assets/tokens/tokens.scss"),
-                  path.join(__dirname, "../src/assets/tokens/tokens.map.scss"),
-                  path.join(__dirname, "../src/styles/styles.scss"),
-                ],
-              },
-            },
-          ],
-        },
-      ],
-    },
-  }),
+
   styleguideDir: "../dist/docs",
   printServerInstructions() {},
   printBuildInstructions(config) {
