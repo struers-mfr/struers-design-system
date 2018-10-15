@@ -19,7 +19,7 @@
     "unit": "jest --config ./test/unit/jest.conf.js --coverage",
     "build:app": "yarn build",
     "build:system": "yarn build --target lib ./src/system.js",
-    "build:docs": "yarn theo && styleguide:build",
+    "build:docs": "yarn theo && yarn styleguide:build",
     "styleguide": "vue-cli-service styleguidist --config ./config/docs.config.js",
     "styleguide:build": "vue-cli-service styleguidist build --config ./config/docs.config.js",
     "theo": "theo ./src/tokens/tokens.yml --transform web --format map.scss,scss,raw.json,json --dest ./src/assets/tokens",
