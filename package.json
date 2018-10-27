@@ -24,7 +24,7 @@
     "styleguide:build": "vue-cli-service styleguidist build --config ./config/docs.config.js",
     "theo": "theo ./src/tokens/tokens.yml --transform web --format map.scss,scss,raw.json,json --dest ./src/assets/tokens",
     "theo:onchange": "onchange \"./src/tokens/*.yml\" -- yarn theo",
-    "test": "yarn theo && unit",
+    "test": "yarn theo && yarn unit",
     "precommit": "pretty-quick --staged"
   },
   "repository": {
