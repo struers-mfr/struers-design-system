@@ -5,7 +5,7 @@ module.exports = {
         data: `
             @import "@/assets/tokens/tokens.scss";
             @import "@/assets/tokens/tokens.map.scss";
-            @import "src/styles/styles.scss";
+            @import "@/styles/styles.scss";
           `,
       },
     },
